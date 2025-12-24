@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection to Artwork</title>
+    <link rel="stylesheet" href="css/general.css">
+    <style>
+        img {
+            width: 80%;
+            display: block;
+            position: static;
+            margin: 0 auto;
+        }
+
+        .main-window {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100vh;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .main-window .section {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translateY(100px);
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            width: 80%;
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .main-window .section p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <h1>Comparison</h1>
+    <p>Solitude by Jason O’Brien</p>
+
+    <img src="images/solitude-crop.png" id="image">
+    <img src="images/solitude-crop.png" style="opacity: 0;">
+
+    <div class="main-window">
+        <div class="section">
+            <h2>Overview</h2>
+            <p>The artwork <i>Solitude</i> by Jason O'Brien depicts a person sitting alone with heads facing down. He was sitting in a dark environment and was surrounded by walls. However, there is a orange round spiral symbol on top of the person's head, suggesting that he is contemplating about something.</p>
+        </div>
+        <div class="section">
+            <h2>adfasdf</h2>
+            <p>Tafadfsadfsadfsadfshe orange spiral symdfsa, indicating that the individual is deeply engaged adfs
+            <h2>Color Palette</h2>
+            <p>The artwork useadfsdaadfsa predominantly dfasddfaadfs contrasting element that draws attention to tdafheadgure's mental state.</p>
+        </div>
+        <div class="section">
+            <h2>adsfasdf</h2>
+            <p>The composafsfafssitadfs adfs adfs dadfsfsfasfafadfs adfs adfs ed adfs space, ad dadfs adfs  afsadfsadfafda
+        </div>
+    </div>
+
+    <div id="spacer"></div>
+
+    <script>
+        let initialTop = null, initialLeft = null, initialWidth = null;
+        const paragraphs = document.querySelectorAll('.main-window .section');
+        const scrollPerPara = 800;
+        document.getElementById("spacer").style.height = (paragraphs.length * scrollPerPara) + "px";
+
+        window.addEventListener("scroll", () => {
+            const img = document.getElementById("image");
+            if (window.scrollY > 0) {
+                if (initialTop === null) {
+                    initialTop = img.offsetTop;
+                    initialWidth = img.offsetWidth / window.innerWidth * 100;
+                    initialLeft = img.offsetLeft;
+                    img.style.position = "fixed";
+                    img.style.top = initialTop + "px";
+                    img.style.margin = "0";
+                    img.style.display = "block";
+                }
+                let progress = Math.min(window.scrollY / 300, 1);
+                img.style.left = (initialLeft - initialLeft * progress) + "px";
+                img.style.width = (initialWidth - (initialWidth - 50) * progress) + "%";
+                img.style.top = (initialTop - initialTop * progress) + "px";
+            } else {
+                initialTop = null;
+                img.style.position = "static";
+                img.style.width = "80%";
+                img.style.margin = "0 auto";
+                img.style.left = "";
+                img.style.top = "";
+            }
+
+            if (window.scrollY < 300) {
+                paragraphs.forEach(p => {
+                    p.style.opacity = '0';
+                    p.style.transform = 'translate(-50%, -50%) translateY(100px)';
+                });
+            } else {
+                let currentIndex = Math.min(Math.floor(window.scrollY / scrollPerPara), paragraphs.length - 1);
+                paragraphs.forEach((p, index) => {
+                    if (index === currentIndex) {
+                        p.style.opacity = '1';
+                        p.style.transform = 'translate(-50%, -50%) translateY(0)';
+                    } else if (index < currentIndex) {
+                        p.style.opacity = '0';
+                        p.style.transform = 'translate(-50%, -50%) translateY(0)';
+                    } else {
+                        p.style.opacity = '0';
+                        p.style.transform = 'translate(-50%, -50%) translateY(100px)';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
