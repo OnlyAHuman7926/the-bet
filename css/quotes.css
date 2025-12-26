@@ -1,0 +1,31 @@
+.quote {
+    position: relative;
+    font-style: italic;
+    color: #ffffff;
+    margin-left: 80px;
+    transition: color 0.3s ease;
+}
+
+.quote:hover {
+    color: var(--accent-color);
+}
+
+.quote-symbol {
+    font-size: 4em;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: var(--accent-color);
+    line-height: 0.8;
+    opacity: 0.7;
+}
+
+.quote-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.highlight {
+    background-color: #333333;
+    transition: background-color 0.5s;
+}
