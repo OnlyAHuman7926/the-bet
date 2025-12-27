@@ -5,9 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const paragraphs = document.querySelectorAll('p');
         for (let p of paragraphs) {
             if (p.textContent.includes(quoteText)) {
-                // Scroll to a few pixels above
                 const rect = p.getBoundingClientRect();
-                const offset = 50; // pixels above
+                const offset = 50;
                 window.scrollTo({
                     top: window.pageYOffset + rect.top - offset,
                     behavior: 'smooth'

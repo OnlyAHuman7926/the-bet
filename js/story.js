@@ -61,7 +61,6 @@ const scenes = [
         textStyle: "top: 50%; left: 50%; translate: -50% -50%; max-width: unset;",
         autoSwitch: true
     },
-    // Add more scenes here
 ];
 
 let currentSceneIndex = 0;
