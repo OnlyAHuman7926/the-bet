@@ -50,6 +50,135 @@ const scenes = [
         autoSwitch: false
     },
     {
+        images: [
+            { id: 'img3', src: 'images/part_1_bg.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'The lawyer was confined in a lodge in the banker\'s garden',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'In the lodge, the lawyer had a piano, had wine, and can request for any books he wanted.',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'The lawyer occasionally played classics, wrote letters and tore them up...',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: '... and he would also read all kinds of books - language, philosophy, history, chemistry, and so on.',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'One day, he stumbled upon the Gospel, and spent an entire year reading that.',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [],
+        text: 'This placeholder is used as a delay',
+        textStyle: 'opacity: 0;',
+        autoSwitch: true
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: '15 years have finally passed. The banker lost heavily on the stock market, and he could no longer afford the two millions to pay.',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'The banker had an idea: he must kill the lawyer before time is up.',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'And so, he quietly sneaked into the lawyer\'s lodge one night.',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'The lawyer was sitting on his chair, staying motionless...',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'The banker noticed a letter on the table addressed to him. He opened the letter and read it.',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: '"And I despise your books, I despise wisdom and the blessings of this world. It is all worthless, fleeting, illusory, and deceptive, like a mirage."',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: '"You have lost your reason and taken the wrong path. You have taken lies for truth, and hideousness for beauty... so I marvel at you who exchange heaven for earth. I don’t want to understand you."',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [
+            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
+        ],
+        text: 'To prove to you in action how I despise all that you live by, I renounce the two millions of which I once dreamed as of paradise and which now I despise. To deprive myself of the right to the money I shall go out from here five hours before the time fixed, and so break the compact...',
+        textStyle: 'bottom: 10%; left: 10%; right: 10%;',
+        autoSwitch: false
+    },
+    {
+        images: [],
+        text: '土壤水分不足，<br>请稍等片刻。',
+        textStyle: 'opacity: 0;',
+        autoSwitch: true
+    },
+    {
         images: [],
         text: "And so, the lawyer wept, <br>feeling contempt about losing stocks the first time ever.",
         textStyle: "top: 50%; left: 50%; translate: -50% -50%; max-width: unset;",
@@ -74,7 +203,10 @@ function showScene(index) {
     const scene = scenes[index];
     if (!scene) {
         // End of story
-        continueText.style.display = 'block';
+        setTimeout(() => {
+            document.getElementById('fade-button').style.display = 'block';
+            setTimeout(() => document.getElementById('fade-button').style.opacity = '1', 50);
+        }, 1000);
         switching = false;
         return;
     }
