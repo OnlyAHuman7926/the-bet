@@ -3,9 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Special Analysis</title>
+    <link rel="stylesheet" href="css/general.css">
+    <style>
+        :root {
+            --accent-color: #007bff;
+        }
+        body {
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 50%, #2a2a2a 100%);
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--accent-color), #0056b3);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .node {
+            position: relative;
+            margin: 100px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .node.left {
+            justify-content: flex-start;
+        }
+        .node.right {
+            justify-content: flex-end;
+        }
+        .node-content {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out forwards;
+            opacity: 1;
+            transform: translateY(30px);
+            z-index: 2;
+            position: relative;
+        }
+        .node:nth-child(1) .node-content { animation-delay: 0.2s; }
+        .node:nth-child(2) .node-content { animation-delay: 0.4s; }
+        .node:nth-child(3) .node-content { animation-delay: 0.6s; }
+        .node:nth-child(4) .node-content { animation-delay: 0.8s; }
+        .node:nth-child(5) .node-content { animation-delay: 1.0s; }
+        .node:nth-child(6) .node-content { animation-delay: 1.2s; }
+        .node:nth-child(7) .node-content { animation-delay: 1.4s; }
+        .node:nth-child(8) .node-content { animation-delay: 1.6s; }
+        .icon {
+            background: var(--accent-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .node-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            color: #ffffff;
+        }
+        td:nth-child(2) {
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            animation: fadeInDown 1.5s ease-out;
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .timeline-end {
+            position: relative;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .conclusion {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease-out 2s forwards;
+            opacity: 1;
+            transform: translateY(30px);
+        }
+    </style>
 </head>
 <body>
-    There is a central question in the story that was given at the very start: Is it worth living while being imprisoned compared to dying but instantly? The answer to this question is neither answered directly in the story nor indirectly from the lawyer's experience, but some interesting thoughts can be extracted.
+    <h1>Journey of the Lawyer</h1>
+    <div class="timeline">
+        <div class="node left">
+            <div class="node-content">
+                <div class="icon">?</div>
+                <div class="node-title">The Central Question</div>
+                <p>There is a central question in the story that was given at the very start: Is it worth living while being imprisoned compared to dying but instantly? The answer to this question is not answered directly in the story nor indirectly from the lawyer's experience. However, how the lawyer's attitude about life and material wealth changed throughout the story is an interesting aspect to consider, and it may provide some insights that are worth considering.</p>
+            </div>
+        </div>
+        <div class="node right">
+            <div class="node-content">
+                <div class="icon">B</div>
+                <div class="node-title">Shallow Perceptions</div>
+                <p>In the beginning, it can be assumed that the characters had very shallow thoughts about the meaning of life. Reasoning takes only a few steps; "Both are equally immoral... for they both have the same object—to take away life." "The death sentence and the life sentence are equally immoral..." These shallow perceptions are what allowed the bet to take place.</p>
+            </div>
+        </div>
+        <div class="node left">
+            <div class="node-content">
+                <div class="icon">H</div>
+                <div class="node-title">Confinement Begins</div>
+                <p>The main part of the story occurred when the lawyer was confined in the banker's lodge. We can notice a transition to what the lawyer was doing in the lodge: shallow sensational stories -> language, philosophy -> Gospel, everything did not ask for wine -> an entire year of only eating -> soilwater.</p>
+            </div>
+        </div>
+        <div class="node right">
+            <div class="node-content">
+                <div class="icon">T</div>
+                <div class="node-title">Transition Table</div>
+                <table>
+                    <tr>
+                        <td>Shallow sensational stories</td>
+                        <td>→</td>
+                        <td>Language, philosophy</td>
+                    </tr>
+                    <tr>
+                        <td>Language, philosophy</td>
+                        <td>→</td>
+                        <td>Gospel</td>
+                    </tr>
+                    <tr>
+                        <td>Did not ask for wine</td>
+                        <td>→</td>
+                        <td>An entire year of only eating</td>
+                    </tr>
+                    <tr>
+                        <td>An entire year of only eating</td>
+                        <td>→</td>
+                        <td>Soilwater</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="node left">
+            <div class="node-content">
+                <div class="icon">X</div>
+                <div class="node-title">Refusal of Pleasures</div>
+                <p>At first, it can be seen that the lawyer was thinking of passing through the 15 years of confinement; therefore, he refused wine and tobacco, since "Wine, he wrote, excites the desires, and desires are the worst foes of the prisoner." However, as time passes, soilwater.</p>
+            </div>
+        </div>
+        <div class="node left">
+            <div class="node-content">
+                <div class="icon">K</div>
+                <div class="node-title">Intellectual Pursuit</div>
+                <p>The books the lawyer was reading were also worth analyzing. The lawyer started reading books with very shallow messages. Then, starting in the sixth year, the lawyer started learning language, philosophy, and history. It provides an idea that maybe intellectual knowledge will be a solution to the meaning of life. The story states that the lawyer felt "unearthly happiness" while reading these books.</p>
+            </div>
+        </div>
+        <div class="node right">
+            <div class="node-content">
+                <div class="icon">G</div>
+                <div class="node-title">Spiritual Revelation</div>
+                <p>However, the lawyer later came across the Gospel. The story wrote that "It seemed strange to the banker that a man who in four years had mastered six hundred learned volumes should waste nearly a year over one thin book easy of comprehension." This confirms to the reader that the lawyer was reading the Gospel closely and experiencing revelations on the meaning of life. Christian beliefs state that the significance of life is heavenly and out of the world, which is a contradiction to what the lawyer had been doing. This is also reflected in the final letter written to the lawyer.</p>
+            </div>
+        </div>
+        <div class="node left">
+            <div class="node-content">
+                <div class="icon">W</div>
+                <div class="node-title">A struggle</div>
+                <p>Notice how after the lawyer finished the Gospel, he started reading a very wide range of books including natural sciences, literature, and chemistry. His current state is described as "a man swimming in the sea among the wreckage of his ship, and trying to save his life by greedily clutching first at one spar and then at another." This suggests that the lawyer was still trying to find value in the world by reading books.</p>
+            </div>
+        </div>
+    </div>
+    <div class="timeline-end">
+        <p class="conclusion">In conclusion, the lawyer's transformative journey from shallow materialism to intellectual hope to profound spiritual enlightenment underscores the power of solitude, reflection, and intellectual pursuit in reshaping one's understanding of life's true meaning. Only after a true experience in confinement did everyone realize the true value of </p>
+    </div>
 </body>
 </html>
