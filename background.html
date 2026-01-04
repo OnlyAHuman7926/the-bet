@@ -6,8 +6,28 @@
     <title>Background</title>
     <link rel="stylesheet" href="css/general.css">
     <style>
+        body {
+            margin: 0;
+            padding: 28px 100px;
+        }
         img {
             max-width: 30%;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.2s forwards;
+        }
+        p:nth-of-type(1) {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.4s forwards;
+        }
+        p:nth-of-type(2) {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+        }
+        p:nth-of-type(3) {
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.8s forwards;
         }
         .redirect-button {
             padding: 10px 20px;
@@ -15,9 +35,24 @@
             color: white;
             border: 1px solid #666;
             cursor: pointer;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.0s forwards;
+        }
+        .redirect-button:nth-of-type(2) {
+            animation-delay: 1.2s;
         }
         .redirect-button:hover {
             background-color: #555;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -30,7 +65,7 @@
     <p>The story was written at the period under the rule of Tsar Alexander III. That was a time where political repression and social changes are taking place. While Alexander II implemented reforms in government and education, Alexander III reversed many of these reforms and instead rule much more conservatively and strictly. Being a writer at that time, Chekhov mainly wrote stories that critique this societal condition. In the beginning of <i>The Bet</i>, a question about capital punishment is raised. Although this question is out of scope in this analysis, it notes the relation between the story and the political condition of the time.</p>
 
     <p>You can now navigate to the story, or read the whole transcript.</p>
-    <div><a href="story.html">→ View/Read the summarized story</a></div>
-    <div><a href="transcript.html">→ Read original transcript</a></div>
+    <button onclick="window.location.href='story.html'" class="redirect-button">→ View/Read the summarized story</button>
+    <button onclick="window.location.href='transcript.html'" class="redirect-button">→ Read original transcript</button>
 </body>
 </html>
