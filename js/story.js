@@ -54,7 +54,7 @@ const scenes = [
             { id: 'img3', src: 'images/part_1_bg.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
-        text: 'The lawyer was confined in a lodge in the banker\'s garden',
+        text: 'The lawyer was confined in a lodge in the banker\'s garden.',
         textStyle: 'bottom: 10%; left: 10%; right: 10%;',
         autoSwitch: false
     },
@@ -102,7 +102,7 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'p2bg', src: 'images/part_2_bg.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
         text: '15 years have finally passed. The banker lost heavily on the stock market, and he could no longer afford the two millions to pay.',
@@ -111,7 +111,7 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'p2bg', src: 'images/part_2_bg.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
         text: 'The banker had an idea: he must kill the lawyer before time is up.',
@@ -120,7 +120,7 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'p2_1bg', src: 'images/part_1_bg.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
         text: 'And so, he quietly sneaked into the lawyer\'s lodge one night.',
@@ -129,7 +129,7 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'lawyer-sit', src: 'images/house_part_2.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
         text: 'The lawyer was sitting on his chair, staying motionless...',
@@ -138,7 +138,7 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'lawyer-sit', src: 'images/house_part_2.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
         text: 'The banker noticed a letter on the table addressed to him. He opened the letter and read it.',
@@ -147,7 +147,7 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'lawyer-sit', src: 'images/house_part_2.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 300%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
         text: '"And I despise your books, I despise wisdom and the blessings of this world. It is all worthless, fleeting, illusory, and deceptive, like a mirage."',
@@ -156,7 +156,7 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'lawyer-sit', src: 'images/house_part_2.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 300%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
         text: '"You have lost your reason and taken the wrong path. You have taken lies for truth, and hideousness for beauty... so I marvel at you who exchange heaven for earth. I don’t want to understand you."',
@@ -165,10 +165,10 @@ const scenes = [
     },
     {
         images: [
-            { id: 'img3', src: 'images/house_in.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 100%;z-index: 0;' },
+            { id: 'lawyer-sit', src: 'images/house_part_2.png', style: 'top: 50%; left: 50%; translate: -50% -50%; width: 300%;z-index: 0;' },
             { id: 'img2', src: 'images/example_2.png', style: 'right: 10%; top: 20%;' }
         ],
-        text: 'To prove to you in action how I despise all that you live by, I renounce the two millions of which I once dreamed as of paradise and which now I despise. To deprive myself of the right to the money I shall go out from here five hours before the time fixed, and so break the compact...',
+        text: 'To prove to you in action how I despise all that you live by, I renounce the two millions of which I once dreamed as of paradise and which now I despise. To deprive myself of the right to the money <b>I shall go out from here five hours before the time fixed, and so break the compact</b>...',
         textStyle: 'bottom: 10%; left: 10%; right: 10%;',
         autoSwitch: false
     },

@@ -99,6 +99,16 @@
             color: #555;
             line-height: 1.6;
         }
+        .redirect-button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: 1px solid #666;
+            cursor: pointer;
+        }
+        .redirect-button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 
@@ -143,7 +153,6 @@
                 <p>In the letter to the banker, the lawyer described the blessings of the world as "worthless, fleeting, illusory, and deceptive". Here, the adjectives used to describe the nature of worldly pleasures act as emphasis on how the lawyer made a complete transformation on how he viewed life.</p>
             </details>
         </div>
-        <a href="lens.html">View Lens Analysis</a>
     </main>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script>
@@ -256,6 +265,9 @@
         }
     </script>
     <script src="js/quotes.js"></script>
+    <div style="text-align: center; margin: 20px;">
+        <button onclick="window.location.href='lens.html'" class="redirect-button">Continue to Special Analysis</button>
+    </div>
 </body>
 
 </html>
