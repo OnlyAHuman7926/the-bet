@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Analysis</title>
     <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root {
             --accent-color: #007bff;
@@ -37,6 +38,24 @@
             flex-direction: row-reverse;
         }
         .node.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        #intro-para {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+        #intro-para.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .line-segment {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s ease-out;
+        }
+        .node.fade-in .line-segment {
             opacity: 1;
             transform: translateY(0);
         }
@@ -81,11 +100,8 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .node-title {
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: var(--accent-color);
+        .icon i {
+            color: white;
         }
         table {
             width: 100%;
@@ -139,7 +155,6 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             animation: fadeIn 1s ease-out 2s forwards;
             opacity: 1;
-            transform: translateY(30px);
         }
         .redirect-button {
             padding: 10px 20px;
@@ -155,17 +170,10 @@
 </head>
 <body>
     <h1>Journey of the Lawyer</h1>
+    <p id="intro-para">There is a central question in the story that was given at the very start: <b>Is it worth living while being imprisoned compared to dying but instantly?</b> The answer to this question is not answered directly in the story nor indirectly from the lawyer's experience. However, the lawyer's experience did show how material wealth should not be considered as an ultimate goal for life, providing an insight into this question. The lawyer's attitude towards the value of life was constantly changing throughout the story, and this page will explore how the lawyer changes.</p>
     <div class="timeline">
         <div class="node">
-            <div class="icon">?</div>
-            <div class="line-segment"></div>
-            <div class="text">
-                <div class="node-title">The Central Question</div>
-                <p>There is a central question in the story that was given at the very start: Is it worth living while being imprisoned compared to dying but instantly? The answer to this question is not answered directly in the story nor indirectly from the lawyer's experience. However, how the lawyer's attitude about life and material wealth changed throughout the story is an interesting aspect to consider, and it may provide some insights that are worth considering.</p>
-            </div>
-        </div>
-        <div class="node">
-            <div class="icon">B</div>
+            <div class="icon"><i class="fas fa-balance-scale"></i></div>
             <div class="line-segment"></div>
             <div class="text">
                 <div class="node-title">Shallow Perceptions</div>
@@ -173,11 +181,11 @@
             </div>
         </div>
         <div class="node">
-            <div class="icon">H</div>
+            <div class="icon"><i class="fas fa-home"></i></div>
             <div class="line-segment"></div>
             <div class="text">
                 <div class="node-title">Confinement Begins</div>
-                <p>The main part of the story occurred when the lawyer was confined in the banker's lodge. We can notice a transition to what the lawyer was doing in the lodge: shallow sensational stories -> language, philosophy -> Gospel, everything did not ask for wine -> an entire year of only eating -> soilwater.</p>
+                <p>The main part of the story occurred when the lawyer was confined in the banker's lodge. We can notice a transition to what the lawyer was doing in the lodge: </p>
                 <table>
                     <tr>
                         <td>Shallow sensational stories</td>
@@ -203,31 +211,23 @@
             </div>
         </div>
         <div class="node">
-            <div class="icon">X</div>
+            <div class="icon"><i class="fas fa-ban"></i></div>
             <div class="line-segment"></div>
             <div class="text">
                 <div class="node-title">Refusal of Pleasures</div>
-                <p>At first, it can be seen that the lawyer was thinking of passing through the 15 years of confinement; therefore, he refused wine and tobacco, since "Wine, he wrote, excites the desires, and desires are the worst foes of the prisoner." However, as time passes, soilwater.</p>
+                <p>At first, it can be seen that the lawyer was thinking of passing through the 15 years of confinement; therefore, he refused wine and tobacco, since "Wine, he wrote, excites the desires, and desires are the worst foes of the prisoner." However, as time passes, he did ask for wine and tobacco, implying that things did not go as expected.</p>
             </div>
         </div>
         <div class="node">
-            <div class="icon">X</div>
-            <div class="line-segment"></div>
-            <div class="text">
-                <div class="node-title">Refusal of Pleasures</div>
-                <p>At first, it can be seen that the lawyer was thinking of passing through the 15 years of confinement; therefore, he refused wine and tobacco, since "Wine, he wrote, excites the desires, and desires are the worst foes of the prisoner." However, as time passes, soilwater.</p>
-            </div>
-        </div>
-        <div class="node">
-            <div class="icon">K</div>
+            <div class="icon"><i class="fas fa-brain"></i></div>
             <div class="line-segment"></div>
             <div class="text">
                 <div class="node-title">Intellectual Pursuit</div>
-                <p>The books the lawyer was reading were also worth analyzing. The lawyer started reading books with very shallow messages. Then, starting in the sixth year, the lawyer started learning language, philosophy, and history. It provides an idea that maybe intellectual knowledge will be a solution to the meaning of life. The story states that the lawyer felt "unearthly happiness" while reading these books.</p>
+                <p>The books the lawyer was reading were also worth analyzing. The lawyer started reading books with very shallow messages. Then, starting in the sixth year, the lawyer started learning language, philosophy, and history. The story suggests that intellectual knowledge may be a solution to the meaning of life as it states that the lawyer felt "unearthly happiness" while reading these books.</p>
             </div>
         </div>
         <div class="node">
-            <div class="icon">G</div>
+            <div class="icon"><i class="fas fa-pray"></i></div>
             <div class="line-segment"></div>
             <div class="text">
                 <div class="node-title">Spiritual Revelation</div>
@@ -235,10 +235,10 @@
             </div>
         </div>
         <div class="node">
-            <div class="icon">W</div>
+            <div class="icon"><i class="fas fa-search"></i></div>
             <div class="line-segment"></div>
             <div class="text">
-                <div class="node-title">A struggle</div>
+                <div class="node-title">A Final Struggle</div>
                 <p>Notice how after the lawyer finished the Gospel, he started reading a very wide range of books including natural sciences, literature, and chemistry. His current state is described as "a man swimming in the sea among the wreckage of his ship, and trying to save his life by greedily clutching first at one spar and then at another." This suggests that the lawyer was still trying to find value in the world by reading books.</p>
             </div>
         </div>
@@ -260,6 +260,7 @@
         document.querySelectorAll('.node, .icon, .text').forEach(el => {
             observer.observe(el);
         });
+        observer.observe(document.getElementById('intro-para'));
     </script>
 </body>
 </html>
