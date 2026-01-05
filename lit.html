@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/quotes.css">
     <style>
-        :root {
-            --accent-color: #007bff;
-        }
-
         body {
             margin: 0;
         }
@@ -63,7 +59,7 @@
             position: absolute;
             top: 30px;
             left: 30px;
-            color: #007bff;
+            color: var(--accent-color);
             line-height: 0.8;
             opacity: 0.7;
         }
@@ -83,7 +79,7 @@
         .accordion-summary {
             cursor: pointer;
             font-weight: bold;
-            color: #007bff;
+            color: var(--accent-color);
             font-size: 1.1em;
             padding: 10px 0;
             border-bottom: 1px solid #e9ecef;
@@ -93,7 +89,7 @@
         }
 
         .accordion-summary:hover {
-            color: #0056b3;
+            color: var(--accent-hover);
         }
 
         .accordion-arrow {
@@ -118,16 +114,6 @@
 
         .content.open {
             opacity: 1;
-        }
-        .redirect-button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: 1px solid #666;
-            cursor: pointer;
-        }
-        .redirect-button:hover {
-            background-color: #555;
         }
     </style>
 </head>
