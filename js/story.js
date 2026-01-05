@@ -83,7 +83,8 @@ const scenes = [
         ],
         text: 'One day, he stumbled upon the Gospel, and spent an entire year reading that.',
         textStyle: 'top: 50%; left: 10%; text-align: left; translate: 0 -50%;',
-        autoSwitch: false
+        autoSwitch: false,
+        delayTime: 600
     },
     {
         images: [
@@ -92,7 +93,7 @@ const scenes = [
         text: '15 years have finally passed. The banker lost heavily on the stock market, and he could no longer afford the two millions to pay.',
         textStyle: 'bottom: 10%;  right: 20%;',
         autoSwitch: false,
-        delayTime: 400
+        delayTime: 800
     },
     {
         images: [
@@ -155,14 +156,14 @@ const scenes = [
         text: "And so, the lawyer wept, <br>feeling contempt about losing stocks the first time ever.",
         textStyle: "top: 50%; left: 50%; translate: -50% -50%; max-width: unset; text-align: center;",
         autoSwitch: true,
-        delayTime: 400
+        delayTime: 800
     },
     {
         images: [],
         text: "The lawyer left before the fixed time, <br>the two millions were unpaid, <br>and the letter was secured in a fireproof safe.",
         textStyle: "top: 50%; left: 50%; translate: -50% -50%; max-width: unset; text-align: center;",
         autoSwitch: true,
-        delayTime: 300
+        delayTime: 400
     },
 ];
 
@@ -170,6 +171,24 @@ let currentSceneIndex = 0;
 const sceneDiv = document.getElementById('scene');
 const continueText = document.getElementById('continue-text');
 let switching = false;
+
+const imageBlobMap = {};
+
+async function preloadImages() {
+    const imageSources = [...new Set(scenes.flatMap(scene => scene.images.map(img => img.src)))];
+    const promises = imageSources.map(async src => {
+        try {
+            const response = await fetch(src);
+            const blob = await response.blob();
+            const blobUrl = URL.createObjectURL(blob);
+            imageBlobMap[src] = blobUrl;
+        } catch (error) {
+            console.error(`Failed to preload image: ${src}`, error);
+        }
+    });
+    await Promise.all(promises);
+}
+preloadImages();
 
 function showScene(index) {
     switching = true;
@@ -208,7 +227,7 @@ function showScene(index) {
                 else {
                     img = document.createElement('img');
                     img.id = imgData.id;
-                    img.src = imgData.src;
+                    img.src = imageBlobMap[imgData.src] || imgData.src;
                     img.className = 'scene-image fade-out';
                     img.style.cssText = imgData.style;
                     sceneDiv.appendChild(img);
@@ -245,7 +264,7 @@ function nextScene() {
     showScene(currentSceneIndex);
 }
 
-function initScenes() {     // called at main HTML file
+function initScenes() { 
     const selection = document.querySelector('.selection');
     if (selection && selection.style.display !== 'none') {
         selection.classList.add('fade-out');
